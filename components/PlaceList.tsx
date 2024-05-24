@@ -15,18 +15,42 @@ const clients = [
     imageUrl: '/logo.png',
     description: 'Peruvian restaurant in the united States with all nice interior',
     category: 'Food & Beverage',
+    location: 'Los Angeles, CA',
+    linkURL: 'https://www.instagram.com/cevichestop/?hl=en',
   },
   {
     id: 2,
     name: 'JLJ Balloon Decor',
     imageUrl: '/jaqueline.png',
     description: 'We focus on providing an extensive range of decorations to make your event memorable.',
-    category: 'Balloon Decorations',
+    category: 'Arts',
+    linkURL: 'https://www.instagram.com/jlj_balloon_decor?igsh=MWQ1ZGUxMzBkMA==',
   },
   {
     id: 3,
+    name: 'Panchitos Restaurant ',
+    imageUrl: '/panchito.jpeg',
+    description: 'One of the first Peruvian restaurants in New Jersey opened for 40 years selling what we are most known for Peruvian chicken ',
+    category: 'Food & Beverages',
+    location: 'Peterson, NJ',
+    linkURL: 'https://www.instagram.com/panchitos__/',
+  },
+  {
+    id: 4,
     name: 'Reform',
-    imageUrl: 'https://tailwindui.com/img/logos/48x48/reform.svg',
+    imageUrl: '/logo.png',
+    lastInvoice: { date: 'January 23, 2023', dateTime: '2023-01-23', amount: '$7,600.00', status: 'Paid' },
+  },
+  {
+    id: 5,
+    name: 'Reform',
+    imageUrl: '/logo.png',
+    lastInvoice: { date: 'January 23, 2023', dateTime: '2023-01-23', amount: '$7,600.00', status: 'Paid' },
+  },
+  {
+    id: 6,
+    name: 'Auto',
+    imageUrl: '/logo.png',
     lastInvoice: { date: 'January 23, 2023', dateTime: '2023-01-23', amount: '$7,600.00', status: 'Paid' },
   },
 ]
@@ -49,49 +73,12 @@ export default function Example() {
               className="h-12 w-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
             />
             <div className="text-sm font-medium leading-6 text-gray-900">{client.name}</div>
-            <Menu as="div" className="relative ml-auto">
-              <MenuButton className="-m-2.5 block p-2.5 text-gray-400 hover:text-gray-500">
-                <span className="sr-only">Open options</span>
-                <EllipsisHorizontalIcon className="h-5 w-5" aria-hidden="true" />
-              </MenuButton>
-              <Transition
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <MenuItems className="absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
-                  <MenuItem>
-                    {({ focus }) => (
-                      <a
-                        href="#"
-                        className={classNames(
-                          focus ? 'bg-gray-50' : '',
-                          'block px-3 py-1 text-sm leading-6 text-gray-900'
-                        )}
-                      >
-                        View<span className="sr-only">, {client.name}</span>
-                      </a>
-                    )}
-                  </MenuItem>
-                  <MenuItem>
-                    {({ focus }) => (
-                      <a
-                        href="#"
-                        className={classNames(
-                          focus ? 'bg-gray-50' : '',
-                          'block px-3 py-1 text-sm leading-6 text-gray-900'
-                        )}
-                      >
-                        Edit<span className="sr-only">, {client.name}</span>
-                      </a>
-                    )}
-                  </MenuItem>
-                </MenuItems>
-              </Transition>
-            </Menu>
+            <div  className="relative ml-auto ">
+              <div className="-m-3.5 block -p-2.5 text-gray-500 ">
+              <p className="text-xs font-light absolute text-center right-0 z-10 mt-0.5 w-24 origin-top-right rounded-md  py-2  ">{client.location} </p>
+             
+              </div>
+            </div>
           </div>
           {/* <img src='/logo.png' alt="" className="pointer-events-none object-cover group-hover:opacity-75" /> */}
           <dl className="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm leading-6">
@@ -102,8 +89,8 @@ export default function Example() {
             <div className="flex justify-between gap-x-4 py-3 items-center">
               <dt className="text-gray-500">{client.category}</dt>
               <dd className="flex items-start gap-x-2">
-               <button className='bg-gray-100 p-2 font-semibold rounded-full text-gray-500 text-xs' 
-               onClick={()=>setOpen(place)}> Learn More </button>
+               <a href={client.linkURL} target="_blank" className='bg-gray-100 p-2 font-medium rounded-full border-2 text-gray-500 text-xs' 
+              > Learn More </a>
               </dd>
             </div>
           </dl>
@@ -111,11 +98,7 @@ export default function Example() {
       ))}
     </ul>
 
-        
- {setOpen?.name?<div className='fixed top-0 right-0 mt-10 z-40'>
-        <SideDrawer close={()=>setOpen([])}/>
-    </div>:null}
-   
+
 
     </div>
   )
