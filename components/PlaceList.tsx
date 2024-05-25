@@ -13,7 +13,7 @@ const clients = [
     id: 1,
     name: 'CevicheStop',
     imageUrl: '/logo.png',
-    description: 'Peruvian restaurant in the united States with all nice interior',
+    description: 'Chef Walther seamlessly blends his beloved Peruvian cuisine with an innovative and international twist, offering Los Angeles diners a culinary experience at CevicheStop that is totally unique.',
     category: 'Food & Beverage',
     location: 'Los Angeles, CA',
     linkURL: 'https://www.instagram.com/cevichestop/?hl=en',
@@ -37,21 +37,30 @@ const clients = [
   },
   {
     id: 4,
-    name: 'Reform',
-    imageUrl: '/logo.png',
-    lastInvoice: { date: 'January 23, 2023', dateTime: '2023-01-23', amount: '$7,600.00', status: 'Paid' },
+    name: 'Sabor Peruvian',
+    imageUrl: '/sabor.png',
+    description: 'We are an immigrant Peruvian family owned restaurant restaurant serving authentic Peruvian food!',
+    category: 'Food & Beverages',
+    location: 'Corona, NYC',
+    linkURL: 'https://www.yelp.com/biz/sabor-peruvian-rotisserie-chicken-fullerton',
   },
   {
     id: 5,
-    name: 'Reform',
+    name: 'Qosqo Maky',
     imageUrl: '/logo.png',
-    lastInvoice: { date: 'January 23, 2023', dateTime: '2023-01-23', amount: '$7,600.00', status: 'Paid' },
+    description: 'Qosqo Maky is a family-owned business located in the Mission neighborhood since 2010. We are dedicated to sharing Peruvian traditions and culture, featuring crafts from diverse regions across Peru.',
+    category: 'Business',
+    location: 'San Francisco, CA',
+    linkURL: 'https://qosqomakysf.com/pages/about-us',
   },
   {
     id: 6,
-    name: 'Auto',
+    name: 'Sumak Peruvian',
     imageUrl: '/logo.png',
-    lastInvoice: { date: 'January 23, 2023', dateTime: '2023-01-23', amount: '$7,600.00', status: 'Paid' },
+    description: 'Discover Peruvian flavors with fresh ingredients & friendly',
+    category: 'Food & Beverages',
+    location: 'Anaheim, CA',
+    linkURL: 'https://www.instagram.com/sumak_peruvianrestaurant?igsh=MzRlODBiNWFlZA==s',
   },
 ]
 
@@ -89,7 +98,7 @@ export default function Example() {
             <div className="flex justify-between gap-x-4 py-3 items-center">
               <dt className="text-gray-500">{client.category}</dt>
               <dd className="flex items-start gap-x-2">
-               <a href={client.linkURL} target="_blank" className='bg-gray-100 p-2 font-medium rounded-full border-2 text-gray-500 text-xs' 
+               <a href={client.linkURL} target="_blank" className='bg-gray-100 p-2 font-medium rounded-full border-2 text-gray-500 hover:bg-gray-300 hover:shadow-sm text-xs' 
               > Learn More </a>
               </dd>
             </div>

@@ -1,7 +1,7 @@
 const stats = [
-    { label: 'Founded', value: '2021' },
-    { label: 'Employees', value: '37' },
-    { label: 'Countries', value: '12' },
+    { label: 'Founded', value: '2015' },
+    { label: 'Businesses', value: '100' },
+    { label: 'Followers', value: '600K' },
     { label: 'Raised', value: '$25M' },
   ]
   
@@ -43,41 +43,33 @@ const stats = [
                     />
                     <use href="#0ef284b8-28c2-426e-9442-8655d393522e" x={86} />
                   </svg>
-                  <img src="https://tailwindui.com/img/logos/workcation-logo-white.svg" alt="" className="h-12 w-auto" />
+                  <img src="/logo.png" alt="" className="h-12 w-auto" />
                   <blockquote className="mt-6 text-xl font-semibold leading-8 text-white">
                     <p>
-                      “Amet amet eget scelerisque tellus sit neque faucibus non eleifend. Integer eu praesent at a. Ornare
-                      arcu gravida natoque erat et cursus tortor.”
+                      Reinventing our narratives
                     </p>
                   </blockquote>
                   <figcaption className="mt-6 text-sm leading-6 text-gray-300">
-                    <strong className="font-semibold text-white">Judith Rogers,</strong> CEO at Workcation
+                    <strong className="font-semibold text-white">Creator,</strong> Being Peruvian
                   </figcaption>
                 </figure>
               </div>
             </div>
             <div>
               <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
-                <p className="text-base font-semibold leading-7 text-indigo-600">Company values</p>
+                <p className="text-base font-semibold leading-7 text-red-600">About us</p>
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  On a mission to empower remote teams
+                  On a mission to empower Peruvian people
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-6">
-                    Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                    vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                    erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                    semper sed amet vitae sed turpis id.
+                  To create a thriving, sustainable, and equitable future for all Peruvians by empowering communities, fostering innovation, and promoting social and economic development.
                   </p>
                   <p className="mt-8">
-                    Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                    auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                    hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+                  We aim to preserve and celebrate Peru's rich cultural heritage through educational programs and support for traditional arts. Intercultural exchange programs will foster national unity and global appreciation of Peruvian culture. Strengthening local governance by training community leaders and promoting participatory decision-making processes will ensure that development initiatives are both inclusive and effective.
                   </p>
                   <p className="mt-8">
-                    Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                    auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                    hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+                  Together, we can create lasting change and ensure that every Peruvian has the opportunity to thrive.
                   </p>
                 </div>
               </div>
@@ -90,7 +82,7 @@ const stats = [
                 ))}
               </dl>
               <div className="mt-10 flex">
-                <a href="#" className="text-base font-semibold leading-7 text-indigo-600">
+                <a href="https://linktr.ee/beingperuvian" className="text-base font-semibold leading-7 text-red-600">
                   Learn more about our company <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
